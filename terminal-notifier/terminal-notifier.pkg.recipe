@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of terminal-notifier and creates a package.</string>
 	<key>Identifier</key>
-	<string>I.pkg.terminal-notifier</string>
+	<string>com.github.morgrowe.pkg.terminal-notifier</string>
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
@@ -18,7 +18,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>I.download.terminal-notifier</string>
+	<string>com.github.morgrowe.download.terminal-notifier</string>
 	<key>Process</key>
 	<array>
 		<dict>
