@@ -11,7 +11,7 @@
 		<key>GITHUB_REPO</key>
 		<string>henri/installpkg</string>
 		<key>NAME</key>
-		<string>installpkg</string>
+		<string>0.3.2</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
