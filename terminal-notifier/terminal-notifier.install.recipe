@@ -54,7 +54,7 @@
 						<key>destination_path</key>
 						<string>/Applications</string>
 						<key>source_item</key>
-						<string>terminal-notifier-1.7.1/terminal-notifier.app</string>
+						<string>terminal-notifier-%version%/terminal-notifier.app</string>
 					</dict>
 				</array>
 			</dict>
