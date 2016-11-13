@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Imports Greenfoot into Munki</string>
+	<string>Imports Greenfoot into Munki.</string>
 	<key>Identifier</key>
 	<string>com.github.morgrowe.munki.greenfoot</string>
 	<key>Input</key>
