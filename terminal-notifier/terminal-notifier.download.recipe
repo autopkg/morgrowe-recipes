@@ -20,22 +20,22 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>GitHubReleasesInfoProvider</string>
 			<key>Arguments</key>
 			<dict>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
-			<key>Processor</key>
-			<string>GitHubReleasesInfoProvider</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
 				<string>%NAME%-%version%.zip</string>
 			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>

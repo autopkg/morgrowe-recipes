@@ -2,18 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v1.0.4 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Imports terminal-notifier into Munki.</string>
+	<string>Imports AdobeDNGConverter into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.morgrowe.munki.terminal-notifier</string>
+	<string>com.github.morgrowe.munki.AdobeDNGConverter</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>utilities</string>
+		<string>apps</string>
 		<key>NAME</key>
-		<string>terminal-notifier</string>
+		<string>Adobe DNG Converter</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -21,11 +19,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Send User Notifications on Mac OS X 10.8 from the command-line.</string>
+			<string>The Adobe DNG Converter is a free utility that enables you to easily convert camera-specific raw files from more than 600 cameras to the more universal DNG raw format.</string>
 			<key>developer</key>
-			<string>Julien Blanchard</string>
+			<string>Adobe</string>
 			<key>display_name</key>
-			<string>terminal-notifier</string>
+			<string>%NAME%</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -35,31 +33,18 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.morgrowe.download.terminal-notifier</string>
+	<string>com.github.sheagcraig.pkg.AdobeDNGConverter</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-			<key>Arguments</key>
-			<dict>
-				<key>archive_path</key>
-				<string>%pathname%</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
-				<key>purge_destination</key>
-				<true/>
-			</dict>
-		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>DmgCreator</string>
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.dmg</string>
 				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/terminal-notifier-%version%/%NAME%.app</string>
+				<string>%pkg_path%</string>
 			</dict>
 		</dict>
 		<dict>
