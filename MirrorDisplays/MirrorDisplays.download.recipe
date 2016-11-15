@@ -22,6 +22,8 @@
 			<string>GitHubReleasesInfoProvider</string>
 			<key>Arguments</key>
 			<dict>
+				<key>asset_regex</key>
+				<string>MirrorDisplays*.zip</string>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 			</dict>
