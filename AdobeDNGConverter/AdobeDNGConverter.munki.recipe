@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Imports AdobeDNGConverter into Munki.</string>
+	<string>Usues sheagcraig's AdobeDNGConverter.pkg and imports into Munki.</string>
 	<key>Identifier</key>
 	<string>com.github.morgrowe.munki.AdobeDNGConverter</string>
 	<key>Input</key>
