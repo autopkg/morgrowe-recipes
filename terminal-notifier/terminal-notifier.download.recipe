@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Created with Recipe Robot v1.0.4 (https://github.com/homebysix/recipe-robot)</string>
+	<string>Not codesigned. Created with Recipe Robot v1.0.4 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Downloads the latest version of terminal-notifier.</string>
 	<key>Identifier</key>
@@ -38,9 +38,29 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
-		</dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
+                <key>purge_destination</key>
+                <true/>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/Applications/terminal-notifier-%version%/%NAME%.app</string>
+                <key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+       			<string>True</string>
+            </dict> 
+        </dict>
 	</array>
 </dict>
 </plist>
